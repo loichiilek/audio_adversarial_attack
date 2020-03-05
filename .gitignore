@@ -1,0 +1,5 @@
+__pycache__/
+.ipynb_checkpoints/
+DeepSpeech/
+deepspeech-0.6.0-models/
+deepspeech-0.4.1-checkpoint/
