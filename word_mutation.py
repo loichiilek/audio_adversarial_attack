@@ -76,7 +76,11 @@ class Attack:
             sess.run(tf.global_variables_initializer())
             sess.run(tf.local_variables_initializer())
             print(logits.eval())
-    # print(ctcloss.eval())
+
+            # # # # # # # # # # #
+            # HERE IS THE ERROR #
+            # # # # # # # # # # # 
+            print(ctcloss.eval())
 
 
 # This is where the main bulk of the code is running
