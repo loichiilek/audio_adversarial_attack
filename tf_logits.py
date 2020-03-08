@@ -27,8 +27,6 @@ def compute_mfcc(audio, **kwargs):
     """
 
     batch_size, size = audio.get_shape().as_list()
-    print("batch size: " + str(batch_size))
-    print("size: " + str(size))
 
     audio = tf.cast(audio, tf.float32)
 
@@ -36,10 +34,8 @@ def compute_mfcc(audio, **kwargs):
     audio = tf.concat((audio[:, :1], audio[:, 1:] - 0.97*audio[:, :-1], np.zeros((batch_size,512),dtype=np.float32)), 1)
 
     # with tf.Session() as sess:  print(audio.eval())
-    print(audio.shape)
     # 2. windowing into frames of 512 samples, overlapping
-    print([i for i in range(0,size-10 ,10)])
-    windowed = tf.stack([audio[:, i:i+512] for i in range(0,size-10 ,10)],1)
+    windowed = tf.stack([audio[:, i:i+512] for i in range(0,size-320 ,320)],1)
 
     window = np.hamming(512)
     windowed = windowed * window
