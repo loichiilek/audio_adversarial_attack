@@ -14,6 +14,8 @@ Download the DeepSpeech model
 - tar -xzf deepspeech-0.4.1-checkpoint.tar.gz
 
 
+## Running the scripts:
+
 Classify audio using the pretrained model
 
 - python3 classify.py --input adversarial_samples/experience.wav
