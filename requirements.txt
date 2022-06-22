@@ -9,7 +9,7 @@ Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.0
 Markdown==3.2.1
 numexpr==2.7.1
-numpy==1.18.1
+numpy==1.22.0
 pandas==1.0.1
 progressbar==2.5
 protobuf==3.11.3
